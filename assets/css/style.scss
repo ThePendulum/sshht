@@ -1,0 +1,23 @@
+@import 'theme';
+@import 'fonts';
+@import 'panels';
+@import 'inputs';
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: $color-text;
+  margin: 0;
+  font-family: $font;
+}
+
+::selection {
+  color: $color-select-text;
+  background: $color-select;
+}
+
+@import '../tags/home/home';
