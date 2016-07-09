@@ -24,9 +24,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
@@ -38,6 +39,12 @@
   padding: 2rem;
   border: solid 1px #ddd; }
 
+.panel.first {
+  margin-top: 10vh; }
+
+.panel:not(.first) {
+  border-top: none; }
+
 .panel-title {
   color: #333;
   margin: 0 0 24px 0;
@@ -47,23 +54,63 @@
 .panel-submit {
   width: 100%; }
 
-.panel-input:not(.last) {
-  margin: 0 0 -1px 0; }
+.panel-input:not(.first) {
+  border-top: 0; }
 
-.panel-input:not(:first-child) {
-  border-top: solid 1px transparent; }
+.panel-input:not(.first):focus {
+  margin-top: -1px; }
 
 .panel-submit {
-  margin: 16px 0 0 0;
-  margin: 1rem 0 0 0; }
+  margin: 16px 0 0;
+  margin: 1rem 0 0; }
+
+.panel-more {
+  color: #a7da41;
+  padding: 8px;
+  padding: .5rem;
+  margin: 16px 0 0;
+  margin: 1rem 0 0;
+  text-align: center;
+  font-size: .8em;
+  cursor: pointer; }
+
+.panel-link {
+  display: block;
+  text-align: center; }
+
+.panel-error {
+  color: #fff;
+  background: #d42;
+  display: block;
+  padding: 16px;
+  padding: 1rem;
+  margin: 0 0 16px 0;
+  margin: 0 0 1rem 0;
+  text-align: center; }
 
 .input,
 .submit {
   box-sizing: border-box; }
 
+.input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 0;
+  padding: .5rem 0;
+  margin: 8px 0 0 0;
+  margin: .5rem 0 0 0; }
+
 .input,
-.textarea {
-  background: none;
+.textarea,
+.select {
+  background: #fff;
   box-sizing: border-box;
   padding: 16px;
   padding: 1rem;
@@ -71,7 +118,8 @@
   font: inherit; }
 
 .input:focus,
-.textarea:focus {
+.textarea:focus,
+.select:focus {
   border: solid 1px #8ec919;
   outline: none; }
 
@@ -88,6 +136,10 @@
 .submit:focus {
   background: #a7da41;
   outline: none; }
+
+.select {
+  padding: 8px;
+  padding: .5rem; }
 
 html,
 body {
@@ -106,6 +158,22 @@ body {
 ::selection {
   color: #fff;
   background: #666; }
+
+.noselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.link {
+  color: #2294ff;
+  text-decoration: none;
+  cursor: pointer; }
+
+.link:hover,
+.link:focus {
+  outline: none;
+  text-decoration: underline; }
 
 .generate {
   width: 500px;

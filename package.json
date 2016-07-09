@@ -28,7 +28,6 @@
     "aes-js": "^2.0.0",
     "config": "^1.21.0",
     "crypto-js": "^3.1.6",
-    "es6-promisify": "^4.1.0",
     "express": "^4.14.0",
     "note-log": "^2.1.9",
     "openpgp": "^2.3.2",

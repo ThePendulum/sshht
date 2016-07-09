@@ -1,5 +1,7 @@
 'use strict';
 
 module.exports = {
-    home: require('./home/home.tag')
+    container: require('./container/container.tag'),
+    gen: require('./gen/gen.tag'),
+    signin: require('./signin/signin.tag')
 };

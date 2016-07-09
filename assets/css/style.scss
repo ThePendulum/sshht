@@ -20,4 +20,23 @@ body {
   background: $color-select;
 }
 
-@import '../tags/home/home';
+.noselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.link {
+  color: $color-link;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover,
+.link:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+@import '../tags/gen/gen';
